@@ -1,0 +1,43 @@
+%!TEX engine = lualatex
+\documentclass[DIV=15]{scrartcl}
+
+\input{dsa5.tex}
+
+\usepackage{multicol}
+
+% neue Seite bei jeder Section
+\let\stdsection\section
+\renewcommand\section{\newpage\stdsection}
+
+% keine Kopf- und Fußzeilen
+% \pagestyle{empty}
+
+% Abstand zwischen Items
+\usepackage{enumitem}
+\setlist{nosep}
+\setlist[description,1]{leftmargin=1.5em}
+\setlist[itemize,1]{leftmargin=1.5em}
+
+\begin{document}
+
+\section*{Vorteile}
+  \begin{multicols}{2}
+    \subsection*{Lorem ipsum}
+    Lorem ipsum dolor sit amet.
+    \begin{description}
+      \item[Regel:] Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    \end{description}
+
+    \quelle{Regelwerk}{123}
+
+    \subsection*{Lorem ipsum II}
+    Lorem ipsum dolor sit amet.
+    \begin{description}
+      \item[Regel:] Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      \item[Reichweite:] 200 Schritt
+    \end{description}
+
+    \quelle{Regelwerk}{123}
+  \end{multicols}
+
+\end{document}
